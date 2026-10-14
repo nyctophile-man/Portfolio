@@ -1,38 +1,26 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Ek hi gradient poore app par -> nav, text aur 3D canvas sab same background
+     (body ka fixed gradient niche se dikhta hai) */
+  background: var(--page-bg);
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* har route ka apna page — mount par halka fade-in */
+.page {
+  flex: 1;
+  min-width: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .page {
+    animation: pageIn 0.45s ease both;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes pageIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
