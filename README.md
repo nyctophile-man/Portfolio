@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👋 Hi, I'm [YOUR NAME]
+# 👋 Hi, I'm [Ayushman]
 
 ### Web Developer · React · Three.js · Node.js · MongoDB
 
